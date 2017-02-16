@@ -1,3 +1,3 @@
 <?php
-echo "Prénom tapé par l'utilisateur : ".$_POST['prenom'];
+echo "Prénom tapé par l'utilisateur : " .$_POST['prenom'];
 ?>

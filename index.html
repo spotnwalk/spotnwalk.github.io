@@ -1,3 +1,6 @@
+<?php
+echo "Prénom tapé par l'utilisateur : ".$_POST['prenom'];
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,14 +12,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="./asset/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="./asset/css/material.css"/>
-		<script>
-		function ajout_donee()
-		{
-			var xhttp = new XMLHttpRequest();						
-				xhttp.open("GET", "register.php", true);
-				xhttp.send();
-				}
-		</script>	
+		
 		
 	</head>
 	
@@ -55,104 +51,71 @@
 		
 		
 		<div class="card card-signup">
-		
-		
-		
-		
-			<form class="form" method="post" action="connexion.php">
+			<form class="form" method="post" action="./asset/php/add_spot.php">
 				<div class="header header-primary text-center">
 					<h4>Saisir des données</h4>
 				</div>
 				<div class="content">
-				
-				
-				
-				
 					<div class="input-group">
-						
 						<span class="input-group-addon">
-											<i class="material-icons">face</i>
-										</span>
-										<input type="text" class="form-control" placeholder="Nom du spot">
+							<i class="material-icons">face</i>
+						</span>
+						<input name="nom_spot" type="text" class="form-control" placeholder="Nom du spot">
 					</div>
-
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">email</i>
-										</span>
-										<input type="text" class="form-control" placeholder="Catégorie du spot">
-									</div>
-
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="text" placeholder="Description du spot" class="form-control" />
-									</div>
-									
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Latitude en degré" class="form-control" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Latitude en nimute d'angle" class="form-control" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Latitude en seconde d'angle" class="form-control" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Longitude en degré" class="form-control" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Longitude en minute d'angle" class="form-control" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">lock_outline</i>
-										</span>
-										<input type="int" placeholder="Longitude en seconde d'angle" class="form-control" />
-									</div>
-									
-									
-
-									<!-- If you want to add a checkbox to this form, uncomment this code
-
-									<div class="checkbox">
-										<label>
-											<input type="checkbox" name="optionsCheckboxes" checked>
-											Subscribe to newsletter
-										</label>
-									</div> -->
-								</div>
-								<div class="footer text-center">
-									<input type="submit" class="btn btn-simple btn-primary btn-lg" value="Ajouter le spot">
-								</div>
-							</form>
-							
-							
-							
-							<form action="index.php" method="post">
-Entrez votre prénom : <input type="text" name="prenom" />
-<input type="submit" value="valider" />
-</form>
-							
-			
-						</div>
-				
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">email</i>
+						</span>
+						<input name="categorie" type="text" class="form-control" placeholder="Catégorie du spot">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="description" type="text" placeholder="Description du spot" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="latitude_deg" type="int" placeholder="Latitude en degré" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="latitude_min" type="int" placeholder="Latitude en nimute d'angle" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="latitude_sec" type="int" placeholder="Latitude en seconde d'angle" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="longitude_deg" type="int" placeholder="Longitude en degré" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="longitude_min" type="int" placeholder="Longitude en minute d'angle" class="form-control" />
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">lock_outline</i>
+						</span>
+						<input name="longitude_sec" type="int" placeholder="Longitude en seconde d'angle" class="form-control" />
+					</div>
+				</div>
+				<div class="footer text-center">
+					<input type="submit" class="btn btn-simple btn-primary btn-lg" value="Ajouter le spot">
+				</div>
+			</form>
+		</div>
 		
 		
 		
