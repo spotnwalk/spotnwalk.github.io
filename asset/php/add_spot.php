@@ -18,7 +18,11 @@
 	}
 	else
 	{
+<<<<<<< HEAD
 		echo "Erreur";
+=======
+		echo "Erreur : ";
+>>>>>>> origin/master
 	}
 	$conn->close();
 ?>
