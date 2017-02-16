@@ -1073,7 +1073,8 @@ output {
   border-radius: 0; }
 .input-sm select.input-sm {
   height: 24px;
-  line-height: 24px; }
+  line-height: 24px; 
+  }
 .input-sm textarea.input-sm,
 .input-sm select[multiple].input-sm {
   height: auto; }
@@ -3035,3 +3036,16 @@ h2.title {
     padding: 0px 5px 15px 5px; }
 	
 body { padding-top: 140px; }
+
+#selection {
+	border: none;
+  border-radius: 3px;
+  position: relative;
+  padding: 12px 30px;
+  margin: 10px 1px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
